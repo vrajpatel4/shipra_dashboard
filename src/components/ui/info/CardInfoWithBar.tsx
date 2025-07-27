@@ -20,7 +20,7 @@ export const CardInfoWithBar: React.FC<TCardInfoWithBar> = memo(
       <div className="p-4 border-1 border-gray-200 rounded-xl bg-white w-full">
         {title && <div className="font-semibold text-md mb-3">{title}</div>}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-x-6 gap-y-6">
-          {listItems?.map((res, index) => {
+          {listItems?.map((res:any, index:number) => {
             return (
               <div className="relative">
                 <div className="flex flex-col gap-2">
