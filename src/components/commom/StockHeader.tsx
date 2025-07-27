@@ -8,11 +8,9 @@ const StockHeader = () => {
   const { data, isLoading, isError } = useNavbarData();
 
   const result = data?.result
-  const currencies = result?.hedgedCurrency?.map(res => res?.currency).join(" ") || "";
-  const currencies1 = result?.hedgedCurrency?.map(res => res?.currency);
+  const currencies = result?.hedgedCurrency?.map((res:any) => res?.currency).join(" ") || "";
+  const currencies1 = result?.hedgedCurrency?.map((res:any) => res?.currency);
   const display = currencies.length > 3 ? `${currencies?.slice(0,15)}+${currencies1.length - 4}` : currencies;
-
-  console.log({ result }, "qwgqhwgeqhcgew");
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading data</div>;
