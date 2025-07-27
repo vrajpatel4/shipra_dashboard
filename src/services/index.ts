@@ -1,0 +1,1 @@
+export { fetchNavbarDetails } from "./navbar";
