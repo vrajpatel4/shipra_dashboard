@@ -1,17 +1,20 @@
-import React, { PropsWithChildren } from 'react'
-import Navbar from '../commom/Navbar'
-import { StockHeader } from '../commom'
+import React, { PropsWithChildren } from "react";
+import Navbar from "../common/Navbar";
+import { StockHeader } from "../common";
+import { ErrorBoundary } from "../ui/ErrorBoundary";
 
-type TDashboardLayout = PropsWithChildren
+type TDashboardLayout = PropsWithChildren;
 
 const DashboardLayout: React.FC<TDashboardLayout> = ({ children }) => {
-    return (
-        <main>
-            <StockHeader/>
-            <Navbar/>
-            <div>{children}</div>
-        </main>
-    )
-}
+  return (
+    <ErrorBoundary>
+      <main>
+        <StockHeader />
+        <Navbar />
+        <div>{children}</div>
+      </main>
+    </ErrorBoundary>
+  );
+};
 
-export default DashboardLayout
+export default DashboardLayout;

@@ -21,7 +21,6 @@ export const ProgressBar: React.FC<TProgressBar> = ({ value = -10 }) => {
 
       {isPositive && (
         <div
-        // absolute left-1/2 top-0 h-full bg-green-500 origin-left z-0
           className="absolute h-full top-0 left-1/2 bg-green-500 origin-left z-0"
           style={{
             width: `${percent}%`,

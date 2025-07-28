@@ -1,20 +1,18 @@
 import { ServiceV1_Common } from "@/lib/api";
 import {
-  TfetchOverViewDetailsResponse,
-  TfetchOverViewHighLowDetailsResponse,
-  TfetchOverViewMovingAvarageDetailsResponse,
-} from "./type";
+  OverviewApiResponse,
+  HighLowApiResponse,
+  MovingAverageApiResponse,
+  ChartApiResponse,
+} from "../../types/overview";
 
-export const fetchOverViewDetails =
-  async (): Promise<TfetchOverViewDetailsResponse> => {
-    const { data } = await ServiceV1_Common.get(
-      "/admin/ticker/unauth/overview"
-    );
-    return data;
-  };
+export const fetchOverViewDetails = async (): Promise<OverviewApiResponse> => {
+  const { data } = await ServiceV1_Common.get("/admin/ticker/unauth/overview");
+  return data;
+};
 
 export const fetchOverViewHighLowDetails =
-  async (): Promise<TfetchOverViewHighLowDetailsResponse> => {
+  async (): Promise<HighLowApiResponse> => {
     const { data } = await ServiceV1_Common.get(
       "/admin/ticker/unauth/trading-high-low"
     );
@@ -22,7 +20,7 @@ export const fetchOverViewHighLowDetails =
   };
 
 export const fetchOverViewMovingAvarageDetails =
-  async (): Promise<TfetchOverViewMovingAvarageDetailsResponse> => {
+  async (): Promise<MovingAverageApiResponse> => {
     const { data } = await ServiceV1_Common.get(
       "/admin/ticker/unauth/moving-average"
     );
@@ -30,7 +28,7 @@ export const fetchOverViewMovingAvarageDetails =
   };
 
 export const fetchOverViewChartDetails =
-  async (): Promise<TfetchOverViewMovingAvarageDetailsResponse> => {
+  async (): Promise<ChartApiResponse> => {
     const { data } = await ServiceV1_Common.get(
       "/admin/ticker/unauth/closing-prices"
     );

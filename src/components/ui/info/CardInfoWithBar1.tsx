@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { memo, SetStateAction, useCallback } from "react";
+import React, { memo } from "react";
 import { ProgressBar } from "../progressbars/ProgressBar";
 
 type TListType = {
@@ -38,17 +38,12 @@ export const CardInfoWithBar1: React.FC<TCardInfoWithBar> = memo(
                       return (
                         <>
                           <div key={index} className="flex items-center gap-4">
-                            {/* Label */}
                             <div className="w-20 text-sm text-gray-900 whitespace-nowrap">
                               {res.label}
                             </div>
-
-                            {/* Bar */}
                             <div className="flex-1">
                               <ProgressBar value={res.value} />
                             </div>
-
-                            {/* Value */}
                             <div
                               className={`w-16 text-right text-sm font-semibold ${
                                 res.value >= 0

@@ -1,8 +1,8 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export const MONTHS: Record<number, string> = {
@@ -23,12 +23,11 @@ export const MONTHS: Record<number, string> = {
 export function parseDateString(dateStr: string): string {
   const parsedDate = new Date(dateStr);
 
-  const month = parsedDate.getMonth()
+  const month = parsedDate.getMonth();
   const finalMonth = MONTHS[month];
 
-  const date = parsedDate.getDate()
-  const year = parsedDate.getFullYear()
+  const date = parsedDate.getDate();
+  const year = parsedDate.getFullYear();
 
-  return `${finalMonth} ${date}, ${year}`
-  
+  return `${finalMonth} ${date}, ${year}`;
 }

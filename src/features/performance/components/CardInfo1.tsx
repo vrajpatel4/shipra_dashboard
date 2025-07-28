@@ -9,7 +9,9 @@ export type CardData = {
   price: string;
 };
 
-export const GridCard: React.FC<{ item: CardData; index: number }> = ({ item }) => {
+export const GridCard: React.FC<{ item: CardData; index: number }> = ({
+  item,
+}) => {
   return (
     <div className="bg-green-50 rounded-lg py-4 px-2 flex flex-col">
       <div className="text-gray-700 font-semibold">{item.date}</div>
@@ -20,7 +22,9 @@ export const GridCard: React.FC<{ item: CardData; index: number }> = ({ item }) 
   );
 };
 
-export const ListCard: React.FC<{ item: CardData; index: number }> = ({ item }) => {
+export const ListCard: React.FC<{ item: CardData; index: number }> = ({
+  item,
+}) => {
   return (
     <div className="bg-white border border-gray-200 rounded-md p-4 shadow-sm">
       <div className="flex justify-between items-center mb-2">
@@ -33,7 +37,9 @@ export const ListCard: React.FC<{ item: CardData; index: number }> = ({ item }) 
   );
 };
 
-export const GridCard1: React.FC<{ item: CardData; index: number }> = ({ item }) => {
+export const GridCard1: React.FC<{ item: CardData; index: number }> = ({
+  item,
+}) => {
   return (
     <div className="bg-green-50 rounded-lg py-4 px-2 flex flex-col">
       <div className="flex items-center justify-between">
@@ -47,7 +53,9 @@ export const GridCard1: React.FC<{ item: CardData; index: number }> = ({ item })
   );
 };
 
-export const ListCard1: React.FC<{ item: CardData; index: number }> = ({ item }) => {
+export const ListCard1: React.FC<{ item: CardData; index: number }> = ({
+  item,
+}) => {
   return (
     <div className="bg-white border border-gray-200 rounded-md p-4 shadow-sm">
       <div className="flex justify-between items-center mb-2">

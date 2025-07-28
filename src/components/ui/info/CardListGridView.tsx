@@ -26,7 +26,6 @@ export const CardListGridView = <T,>({
 
   return (
     <div className="p-4 border border-gray-200 rounded-lg bg-white w-full">
-      {/* Header */}
       <div className="flex items-center justify-between mb-4">
         {title && <h2 className="text-lg font-semibold">{title}</h2>}
         <div className="flex gap-2">
@@ -48,8 +47,6 @@ export const CardListGridView = <T,>({
           </button>
         </div>
       </div>
-
-      {/* Card Container */}
       <div
         className={clsx(
           view === "grid" && "grid gap-4",

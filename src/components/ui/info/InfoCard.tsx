@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { memo, SetStateAction, useCallback } from "react";
+import React, { memo } from "react";
 
 type TListType = {
   key: string;

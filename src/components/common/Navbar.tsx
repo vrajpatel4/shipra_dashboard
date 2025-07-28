@@ -1,8 +1,7 @@
 "use client";
 import { DASHBOARD_NAV_ITEMS } from "@/constants";
-import { useNavbarData } from "@/hooks";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
