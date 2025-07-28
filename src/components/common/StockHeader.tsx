@@ -42,7 +42,7 @@ const StockHeader = () => {
     <div className="bg-gray-100 pb-3">
       <div className="flex items-center justify-between p-3 w-full overflow-auto">
         <div className="flex items-center gap-3 min-w-max">
-          <img src={result?.logo} width={30} height={30} />
+          <img src={result?.logo} width={30} height={30} alt="Company logo" />
           <div className="flex items-center gap-x-0.5">
             <div className="font-semibold text-sm">{result?.nm}</div>
             <div className="text-xs text-gray-500">NEO-GOOG:NE</div>

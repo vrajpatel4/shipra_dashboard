@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const handleTabChange = useCallback((index: number, route: string) => {
     router.push(route);
-  }, []);
+  }, [router]);
 
   return (
     <nav>

@@ -10,7 +10,7 @@ type TInfoCard = {
   listItems: Array<TListType>;
 };
 
-export const InfoCard: React.FC<TInfoCard> = memo(({ listItems }) => {
+const InfoCardComponent: React.FC<TInfoCard> = ({ listItems }) => {
   if (listItems.length === 0) return null;
 
   return (
@@ -44,4 +44,7 @@ export const InfoCard: React.FC<TInfoCard> = memo(({ listItems }) => {
       </div>
     </div>
   );
-});
+};
+
+export const InfoCard = memo(InfoCardComponent);
+InfoCard.displayName = "InfoCard";
