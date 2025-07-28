@@ -46,3 +46,5 @@ export const Filter1: React.FC<TFilter1> = memo(
     );
   }
 );
+
+Filter1.displayName = "Filter1";

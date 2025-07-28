@@ -1,12 +1,4 @@
-import React, {
-  memo,
-  PropsWithChildren
-} from "react";
-
-type TListType = {
-  key: string;
-  value: string;
-};
+import React, { memo, PropsWithChildren } from "react";
 
 type TCardList = {
   title?: string;
@@ -25,3 +17,5 @@ export const CardListView: React.FC<TCardList> = memo(
     );
   }
 );
+
+CardListView.displayName = "CardListView";
